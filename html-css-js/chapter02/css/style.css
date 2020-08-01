@@ -1,4 +1,5 @@
 @import url(sanitize.css);
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 body {
     background-color: #f0f0f0;
     padding: 10px;
@@ -22,6 +23,7 @@ header h1 {
     font-size: 24px;
     font-weight: normal;
     text-align: center;
+    font-family: Sriracha;
 }
 
 .description {
@@ -45,4 +47,49 @@ header h1 {
     padding: 3px 5px;
     font-size: 80%;
     color: #fff;
+}
+
+.content {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.songs {
+    margin: 0 0 20px;
+}
+
+.songs h2 {
+    clear: left;
+    font-size: 100%;
+    font-weight: normal;
+    margin: 0;
+    background-color: #E6E4DD;
+}
+
+.songs ol {
+    padding: 0;
+    margin: 0;
+    list-style: decimal inside;
+}
+
+.songs li {
+    border-bottom: 1px solid #ccc;
+    width: 50%;
+    float: left;
+    padding: 5px 10px;
+}
+
+.clearfix:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+a {
+    color: #666
+}
+
+footer {
+    text-align: center;
+    font-size: 80%
 }
