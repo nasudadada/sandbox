@@ -22,8 +22,9 @@
 
     <div class="container">
         <script>
-            // 日付を表示する。 TODO 実行日付を表示するよう修正
-            document.write('<p class="date">20xx/01/23</p>');
+            var today = new Date()
+            var todayHtml = today.getFullYear() + '/' + (today.getMonth() + 1) + '/' + today.getDay()
+            document.write('<p>今日は、' + todayHtml + 'です</p>')
         </script>
     </div>
 </body>
