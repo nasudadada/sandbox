@@ -1,0 +1,26 @@
+# ローカルの.terraformディレクトリ
+**/.terraform/*
+
+# 状態ファイル
+*.tfstate
+*.tfstate.*
+
+# ログファイル
+crash.log
+
+# モジュールのバージョンファイル
+.terraform.lock.hcl
+
+# 変数ファイル
+*.tfvars
+*.tfvars.json
+
+# プランファイル
+*.tfplan
+
+# バックアップファイル
+*.backup
+
+# .envファイル
+.env
+
