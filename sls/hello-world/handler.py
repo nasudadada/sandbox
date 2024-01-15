@@ -1,12 +1,7 @@
 import json
-
+import requests
 
 def hello(event, context):
-    body = {
-        "body": "{\"message\": \"Hello World!\", \"input\": {}}",
-        "input": event,
-    }
-
-    response = {"statusCode": 200, "body": json.dumps(body)}
-
-    return response
+    # テストサイトにGETでアクセス
+    response = requests.get("https://httpbin.org/get", params={"param1": "value1"})
+    return response.json()

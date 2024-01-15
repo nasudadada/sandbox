@@ -4,6 +4,7 @@ frameworkVersion: '3'
 provider:
   name: aws
   runtime: python3.9
+  region: ap-northeast-1
 
 functions:
   hello:
@@ -12,3 +13,6 @@ functions:
       - httpApi:
           path: /
           method: get
+
+plugins:
+  - serverless-python-requirements
