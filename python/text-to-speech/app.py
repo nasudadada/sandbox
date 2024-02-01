@@ -22,12 +22,10 @@ def stream_and_play(text):
         input=text,
     )
 
-    # OpenAI APIのレスポンスから直接バイナリコンテンツを使用
     audio_bytes = response.content
     return audio_bytes
 
 
-# Streamlitウィジェットのセットアップ
 if __name__ == "__main__":
     text = st.text_area("テキストを入力してください:", height=300)
     if st.button("再生"):
