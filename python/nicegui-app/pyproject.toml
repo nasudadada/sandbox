@@ -2,12 +2,12 @@
 name = "nicegui-app"
 version = "0.1.0"
 description = ""
-authors = ["yuichi.nasukawa <nasu0227@gmail.com>"]
+authors = ["nasudadada"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-nicegui = "^1.4.13"
+nicegui = "^1.4.14"
 
 
 [build-system]
