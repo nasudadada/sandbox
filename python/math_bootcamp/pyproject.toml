@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "math-bootcamp"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+jupyterlab = "^4.1.0"
+numpy = "^1.26.4"
+black = "^24.1.1"
+jupyterlab-code-formatter = "^2.2.1"
+isort = "^5.13.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
