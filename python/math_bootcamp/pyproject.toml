@@ -13,6 +13,7 @@ black = "^24.1.1"
 jupyterlab-code-formatter = "^2.2.1"
 isort = "^5.13.2"
 matplotlib = "^3.8.2"
+seaborn = "^0.13.2"
 
 
 [build-system]
