@@ -9,7 +9,7 @@ fn main() {
     }
     println!("The value of x is: {}", x);
 
-    let guess: u32 = "42".parse().expect("Not a Number");
+    let _guess: u32 = "42".parse().expect("Not a Number");
 
     /* 数値演算 */
     // 足し算
@@ -46,8 +46,17 @@ fn main() {
     let c = 'z';
     let z = 'ℤ';
     let heart_eyed_cat = '😻';    //ハート目の猫
-    println!("The value of c: {}, z:{}, heart_eyed_cat:{}",c,z,heart_eyed_cat)
+    println!("The value of c: {}, z:{}, heart_eyed_cat:{}",c,z,heart_eyed_cat);
 
     /* 複合型 */
-    let tup:(i32, f64, u8) = (500, 6.4, 1)
+    let _tup:(i32, f64, u8) = (500, 6.4, 1);
+
+    another_function();
+
+}
+
+
+
+fn another_function(){
+    println!("Another function.");  // 別の関数
 }
