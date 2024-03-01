@@ -51,12 +51,4 @@ fn main() {
     /* 複合型 */
     let _tup:(i32, f64, u8) = (500, 6.4, 1);
 
-    another_function();
-
-}
-
-
-
-fn another_function(){
-    println!("Another function.");  // 別の関数
 }
