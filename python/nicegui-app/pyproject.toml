@@ -7,7 +7,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-nicegui = "^1.4.14"
+nicegui = "^1.4.21"
 
 
 [build-system]
