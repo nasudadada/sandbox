@@ -2,16 +2,20 @@
 name = "vector-search"
 version = "0.1.0"
 description = ""
-authors = ["yuichi.nasukawa <nasu0227@gmail.com>"]
+authors = ["yuichi.nasukawa"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.12"
 sentence-transformers = "^3.2.1"
 chromadb = "^0.5.15"
 fugashi = "^1.3.2"
 ipadic = "^1.0.0"
+sqlite-vss = "^0.1.2"
+openai = "^1.61.1"
 
+[tool.poetry.scripts]
+vector-search = "src.main:main"
 
 [build-system]
 requires = ["poetry-core"]
