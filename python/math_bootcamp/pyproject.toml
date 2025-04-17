@@ -7,7 +7,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-jupyterlab = "^4.1.0"
+jupyterlab = "^4.2.5"
 numpy = "^1.26.4"
 black = "^24.3.0"
 jupyterlab-code-formatter = "^2.2.1"
