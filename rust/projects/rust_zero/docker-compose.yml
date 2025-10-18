@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  rust-dev:
+    build: .
+    container_name: rust-zero-dev
+    volumes:
+      - .:/workspace
+      - cargo-cache:/usr/local/cargo/registry
+      - target-cache:/workspace/target
+    working_dir: /workspace
+    stdin_open: true
+    tty: true
+    environment:
+      - RUST_BACKTRACE=1
+    ports:
+      - "8080:8080"  # 必要に応じてポートマッピング
+
+volumes:
+  cargo-cache:
+  target-cache: 
