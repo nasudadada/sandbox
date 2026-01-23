@@ -51,14 +51,14 @@ tests = ["mypy (>=0.800)", "pytest", "pytest-asyncio"]
 
 [[package]]
 name = "backoff"
-version = "2.2.1"
+version = "1.11.1"
 description = "Function decoration for backoff and retry"
 optional = false
-python-versions = ">=3.7,<4.0"
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 groups = ["main"]
 files = [
-    {file = "backoff-2.2.1-py3-none-any.whl", hash = "sha256:63579f9a0628e06278f7e47b7d7d5b6ce20dc65c5e96a6f3ca99a6adca0396e8"},
-    {file = "backoff-2.2.1.tar.gz", hash = "sha256:03f829f5bb1923180821643f8753b0502c3b682293992485b0eef2807afa5cba"},
+    {file = "backoff-1.11.1-py2.py3-none-any.whl", hash = "sha256:61928f8fa48d52e4faa81875eecf308eccfb1016b018bb6bd21e05b5d90a96c5"},
+    {file = "backoff-1.11.1.tar.gz", hash = "sha256:ccb962a2378418c667b3c979b504fdeb7d9e0d29c0579e3b13b86467177728cb"},
 ]
 
 [[package]]
@@ -596,21 +596,21 @@ requests = ["requests (>=2.20.0,<3.0.0.dev0)"]
 
 [[package]]
 name = "googleapis-common-protos"
-version = "1.66.0"
+version = "1.56.1"
 description = "Common protobufs used in Google APIs"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.6"
 groups = ["main"]
 files = [
-    {file = "googleapis_common_protos-1.66.0-py2.py3-none-any.whl", hash = "sha256:d7abcd75fabb2e0ec9f74466401f6c119a0b498e27370e9be4c94cb7e382b8ed"},
-    {file = "googleapis_common_protos-1.66.0.tar.gz", hash = "sha256:c3e7b33d15fdca5374cc0a7346dd92ffa847425cc4ea941d970f13680052ec8c"},
+    {file = "googleapis-common-protos-1.56.1.tar.gz", hash = "sha256:6b5ee59dc646eb61a8eb65ee1db186d3df6687c8804830024f32573298bca19b"},
+    {file = "googleapis_common_protos-1.56.1-py2.py3-none-any.whl", hash = "sha256:ddcd955b5bb6589368f659fa475373faa1ed7d09cde5ba25e88513d87007e174"},
 ]
 
 [package.dependencies]
-protobuf = ">=3.20.2,<4.21.1 || >4.21.1,<4.21.2 || >4.21.2,<4.21.3 || >4.21.3,<4.21.4 || >4.21.4,<4.21.5 || >4.21.5,<6.0.0.dev0"
+protobuf = ">=3.15.0"
 
 [package.extras]
-grpc = ["grpcio (>=1.44.0,<2.0.0.dev0)"]
+grpc = ["grpcio (>=1.0.0)"]
 
 [[package]]
 name = "grpcio"
@@ -1648,40 +1648,27 @@ deprecated = ">=1.2.6"
 importlib-metadata = ">=6.0,<=8.5.0"
 
 [[package]]
-name = "opentelemetry-exporter-otlp-proto-common"
-version = "1.30.0"
-description = "OpenTelemetry Protobuf encoding"
-optional = false
-python-versions = ">=3.8"
-groups = ["main"]
-files = [
-    {file = "opentelemetry_exporter_otlp_proto_common-1.30.0-py3-none-any.whl", hash = "sha256:5468007c81aa9c44dc961ab2cf368a29d3475977df83b4e30aeed42aa7bc3b38"},
-    {file = "opentelemetry_exporter_otlp_proto_common-1.30.0.tar.gz", hash = "sha256:ddbfbf797e518411857d0ca062c957080279320d6235a279f7b64ced73c13897"},
-]
-
-[package.dependencies]
-opentelemetry-proto = "1.30.0"
-
-[[package]]
 name = "opentelemetry-exporter-otlp-proto-grpc"
-version = "1.30.0"
+version = "1.11.1"
 description = "OpenTelemetry Collector Protobuf over gRPC Exporter"
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.6"
 groups = ["main"]
 files = [
-    {file = "opentelemetry_exporter_otlp_proto_grpc-1.30.0-py3-none-any.whl", hash = "sha256:2906bcae3d80acc54fd1ffcb9e44d324e8631058b502ebe4643ca71d1ff30830"},
-    {file = "opentelemetry_exporter_otlp_proto_grpc-1.30.0.tar.gz", hash = "sha256:d0f10f0b9b9a383b7d04a144d01cb280e70362cccc613987e234183fd1f01177"},
+    {file = "opentelemetry-exporter-otlp-proto-grpc-1.11.1.tar.gz", hash = "sha256:e34fc79c76e299622812da5fe37cfeffdeeea464007530488d824e6c413e6a58"},
+    {file = "opentelemetry_exporter_otlp_proto_grpc-1.11.1-py3-none-any.whl", hash = "sha256:7cabcf548604ab8156644bba0e9cb0a9c50561d621be39429e32581f5c8247a6"},
 ]
 
 [package.dependencies]
-deprecated = ">=1.2.6"
+backoff = ">=1.10.0,<2.0.0"
 googleapis-common-protos = ">=1.52,<2.0"
-grpcio = ">=1.63.2,<2.0.0"
-opentelemetry-api = ">=1.15,<2.0"
-opentelemetry-exporter-otlp-proto-common = "1.30.0"
-opentelemetry-proto = "1.30.0"
-opentelemetry-sdk = ">=1.30.0,<1.31.0"
+grpcio = ">=1.0.0,<2.0.0"
+opentelemetry-api = ">=1.3,<2.0"
+opentelemetry-proto = "1.11.1"
+opentelemetry-sdk = ">=1.11,<2.0"
+
+[package.extras]
+test = ["pytest-grpc"]
 
 [[package]]
 name = "opentelemetry-instrumentation"
@@ -1747,18 +1734,18 @@ instruments = ["fastapi (>=0.58,<1.0)"]
 
 [[package]]
 name = "opentelemetry-proto"
-version = "1.30.0"
+version = "1.11.1"
 description = "OpenTelemetry Python Proto"
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.6"
 groups = ["main"]
 files = [
-    {file = "opentelemetry_proto-1.30.0-py3-none-any.whl", hash = "sha256:c6290958ff3ddacc826ca5abbeb377a31c2334387352a259ba0df37c243adc11"},
-    {file = "opentelemetry_proto-1.30.0.tar.gz", hash = "sha256:afe5c9c15e8b68d7c469596e5b32e8fc085eb9febdd6fb4e20924a93a0389179"},
+    {file = "opentelemetry-proto-1.11.1.tar.gz", hash = "sha256:5df0ec69510a9e2414c0410d91a698ded5a04d3dd37f7d2a3e119e3c42a30647"},
+    {file = "opentelemetry_proto-1.11.1-py3-none-any.whl", hash = "sha256:4d4663123b4777823aa533f478c6cef3ecbcf696d8dc6ac7fd6a90f37a01eafd"},
 ]
 
 [package.dependencies]
-protobuf = ">=5.0,<6.0"
+protobuf = ">=3.13.0"
 
 [[package]]
 name = "opentelemetry-sdk"
@@ -2034,23 +2021,20 @@ test = ["anthropic", "coverage", "django", "flake8", "freezegun (==0.3.15)", "la
 
 [[package]]
 name = "protobuf"
-version = "5.29.3"
+version = "7.34.0rc1"
 description = ""
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "protobuf-5.29.3-cp310-abi3-win32.whl", hash = "sha256:3ea51771449e1035f26069c4c7fd51fba990d07bc55ba80701c78f886bf9c888"},
-    {file = "protobuf-5.29.3-cp310-abi3-win_amd64.whl", hash = "sha256:a4fa6f80816a9a0678429e84973f2f98cbc218cca434abe8db2ad0bffc98503a"},
-    {file = "protobuf-5.29.3-cp38-abi3-macosx_10_9_universal2.whl", hash = "sha256:a8434404bbf139aa9e1300dbf989667a83d42ddda9153d8ab76e0d5dcaca484e"},
-    {file = "protobuf-5.29.3-cp38-abi3-manylinux2014_aarch64.whl", hash = "sha256:daaf63f70f25e8689c072cfad4334ca0ac1d1e05a92fc15c54eb9cf23c3efd84"},
-    {file = "protobuf-5.29.3-cp38-abi3-manylinux2014_x86_64.whl", hash = "sha256:c027e08a08be10b67c06bf2370b99c811c466398c357e615ca88c91c07f0910f"},
-    {file = "protobuf-5.29.3-cp38-cp38-win32.whl", hash = "sha256:84a57163a0ccef3f96e4b6a20516cedcf5bb3a95a657131c5c3ac62200d23252"},
-    {file = "protobuf-5.29.3-cp38-cp38-win_amd64.whl", hash = "sha256:b89c115d877892a512f79a8114564fb435943b59067615894c3b13cd3e1fa107"},
-    {file = "protobuf-5.29.3-cp39-cp39-win32.whl", hash = "sha256:0eb32bfa5219fc8d4111803e9a690658aa2e6366384fd0851064b963b6d1f2a7"},
-    {file = "protobuf-5.29.3-cp39-cp39-win_amd64.whl", hash = "sha256:6ce8cc3389a20693bfde6c6562e03474c40851b44975c9b2bf6df7d8c4f864da"},
-    {file = "protobuf-5.29.3-py3-none-any.whl", hash = "sha256:0a18ed4a24198528f2333802eb075e59dea9d679ab7a6c5efb017a59004d849f"},
-    {file = "protobuf-5.29.3.tar.gz", hash = "sha256:5da0f41edaf117bde316404bad1a486cb4ededf8e4a54891296f648e8e076620"},
+    {file = "protobuf-7.34.0rc1-cp310-abi3-macosx_10_9_universal2.whl", hash = "sha256:74386406345f4d869da4a7906605a04295c1c904787992fb686ac321c9def6c3"},
+    {file = "protobuf-7.34.0rc1-cp310-abi3-manylinux2014_aarch64.whl", hash = "sha256:7b42643d5ce4a9133084eec057d781e5e966b52bab68b9fdc6d7226384be931a"},
+    {file = "protobuf-7.34.0rc1-cp310-abi3-manylinux2014_s390x.whl", hash = "sha256:2250a68501df3e9381710e199771523056d442a1df1edeb3829d29e970224f68"},
+    {file = "protobuf-7.34.0rc1-cp310-abi3-manylinux2014_x86_64.whl", hash = "sha256:063194f132c92892dd271e9e77fc9651c84c56a486bb6e7657b99dde8462d3a5"},
+    {file = "protobuf-7.34.0rc1-cp310-abi3-win32.whl", hash = "sha256:2af017361d9ff1b52a4fe933fccf36bd5e453e3ef855dc66426ea03a006ad426"},
+    {file = "protobuf-7.34.0rc1-cp310-abi3-win_amd64.whl", hash = "sha256:d88119bf98ae532c2e92168471ddf2fdb3f3d3e58bf236be0c2af375d2b1b4d1"},
+    {file = "protobuf-7.34.0rc1-py3-none-any.whl", hash = "sha256:8c3c66f15e1035919bd105293d18c694986a7496ca105a1035a455da7b7958d2"},
+    {file = "protobuf-7.34.0rc1.tar.gz", hash = "sha256:5ceac3c2c428bfa5752b28082849fd9003db613b6c90305ec14bad6036a2d717"},
 ]
 
 [[package]]
